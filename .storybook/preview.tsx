@@ -1,8 +1,8 @@
 import { Global, css } from '@emotion/react';
-import { DocsContainer, DocsPage } from '@storybook/addon-docs/blocks';
+import type { Meta } from '@storybook/react/types-6-0';
 import { themes } from '@storybook/theming';
 
-export const parameters = {
+export const parameters: Meta['parameters'] = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     expanded: true,
@@ -13,6 +13,7 @@ export const parameters = {
   },
   docs: {
     theme: themes.dark,
+    inlineStories: true,
   },
   options: {
     storySort: {
@@ -28,13 +29,15 @@ export const parameters = {
   },
 };
 
-export const decorators = [
+export const decorators: Meta['decorators'] = [
   (Story) => (
     <>
       <Global
         styles={css`
           * {
             box-sizing: border-box;
+            font-family: 'Nunito Sans', sans-serif;
+            color: #fff;
           }
         `}
       />
