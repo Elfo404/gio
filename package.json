@@ -1,0 +1,34 @@
+{
+  "name": "gio-workspace",
+  "version": "1.0.0",
+  "license": "ISC",
+  "author": "",
+  "description": "",
+  "private": true,
+  "workspaces": [
+    "./packages/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "@emotion/babel-plugin": "^11.2.0",
+    "@emotion/react": "^11.1.5",
+    "@storybook/addon-actions": "^6.2.2",
+    "@storybook/addon-essentials": "^6.2.2",
+    "@storybook/addon-links": "^6.2.2",
+    "@storybook/react": "^6.2.2",
+    "babel-loader": "^8.2.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.2.3"
+  },
+  "importSort": {
+    ".ts, .tsx": {
+      "style": "module"
+    }
+  }
+}

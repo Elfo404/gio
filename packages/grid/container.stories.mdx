@@ -1,0 +1,54 @@
+import { Meta, Story, Canvas, Source } from '@storybook/addon-docs/blocks';
+import { Default, decorators, Box, gridConfig, Wrapper, Template } from './container.stories';
+import { Container, GridConfigProvider } from './src';
+
+<Meta
+  title="Grid/Container"
+  decorators={decorators}
+  component={Container}
+  argTypes={{
+    fluid: {
+      control: {
+        type: 'boolean',
+      },
+    },
+  }}
+/>
+
+<Story name="Container" parameters={{ docs: { disable: true } }}>
+  {Template.bind({})}
+</Story>
+
+# Container
+
+The following examples use this configuration:
+
+<Source
+  language="ts"
+  dark
+  code={`const gridConfig = ${JSON.stringify(gridConfig, null, 2)};`}
+/>
+
+## Responsive Container
+
+The `Container` responsively sets a `max-width` for each configured breakpoint equal to `calc(breakpoint - gutter)`.
+
+<Canvas withToolbar>
+  <GridConfigProvider value={gridConfig}>
+    <Container>
+      <Box>Container</Box>
+    </Container>
+  </GridConfigProvider>
+</Canvas>
+
+## Fluid Container
+
+When used with the `fluid` prop, `max-width` is always `100%`.
+
+<Canvas withToolbar>
+  <GridConfigProvider value={gridConfig}>
+    <Container fluid>
+      <Box>Fluid Container</Box>
+    </Container>
+  </GridConfigProvider>
+</Canvas>
