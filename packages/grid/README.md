@@ -4,6 +4,7 @@
 
 `@gio/grid` is a simple and opinionanted responsive grid system for react based on emotion and flexbox.
 
+It's heavily inspired by [flexboxGrid](https://github.com/kristoferjoseph/flexboxgrid).
 It doesn't try to solve every possible layout problem, but (hopefully) will solve most of the simple use cases.
 
 ## Install
@@ -50,7 +51,7 @@ export const App = () => {
 
 ### With TypeScript
 
-As per the previous examples, `Col` accepts every key defined in `breakpoints` as props.
+The `Col` component accepts every key defined in `breakpoints` as props.
 In order to get the correct types, we leverage [module augmentation](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation) to augment default types.
 
 ```ts
