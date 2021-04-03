@@ -2,18 +2,16 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "declaration": true,
-    "allowJs": false,
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
-    "module": "esnext",
+    "module": "ESNext",
     "target": "ESNext",
     "moduleResolution": "node",
-    "resolveJsonModule": true,
     "lib": ["dom", "dom.iterable", "esnext"],
     "jsxImportSource": "@emotion/react",
     "outDir": "./dist"
   },
-  "include": ["./src/**/*"]
+  "files": ["./src/index.tsx"]
 }

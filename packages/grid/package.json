@@ -12,8 +12,8 @@
     "clean": "rm -rf ./dist",
     "dev": "npm run clean && tsc --watch",
     "build": "npm run clean && tsc",
-    "lint": "eslint ./src",
-    "limit": "size-limit"
+    "limit": "npm run build && size-limit",
+    "precommit": "lint-staged"
   },
   "devDependencies": {
     "@emotion/react": "^11.1.5",
@@ -24,6 +24,7 @@
     "@size-limit/time": "^4.10.2",
     "eslint": "7.23.0",
     "import-sort-style-module": "^6.0.0",
+    "lint-staged": "10.5.4",
     "prettier-plugin-import-sort": "^0.0.6",
     "size-limit": "^4.10.2",
     "typescript": "^4.2.3"

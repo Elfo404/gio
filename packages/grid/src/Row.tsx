@@ -5,7 +5,7 @@ import { useStyles } from './hooks/useStyles';
 import { GridConfig } from '.';
 
 interface Props {
-  children: ReactNode;
+  children?: ReactNode;
   className?: string;
   justify?:
     | 'center'
