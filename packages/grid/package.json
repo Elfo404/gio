@@ -4,6 +4,7 @@
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",
+  "private": true,
   "scripts": {
     "lint": "eslint ./src",
     "dev": "tsc --watch",

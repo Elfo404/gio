@@ -1,7 +1,6 @@
 import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
 import { Template } from './container.stories';
 import { Container, GridConfigProvider } from './src';
-import { Box } from './Box';
 
 export const gridConfig = {
   breakpoints: { xs: 15, sm: 20, md: 25, lg: 30 },
@@ -30,22 +29,6 @@ export const gridConfig = {
 
 The `Container` responsively sets a `max-width` for each configured breakpoint equal to `calc(breakpoint - gutter)`.
 
-<Canvas>
-  <GridConfigProvider value={gridConfig}>
-    <Container>
-      <Box>Container</Box>
-    </Container>
-  </GridConfigProvider>
-</Canvas>
-
 ## Fluid Container
 
 When used with the `fluid` prop, `max-width` is always `100%`.
-
-<Canvas>
-  <GridConfigProvider value={gridConfig}>
-    <Container fluid>
-      <Box>Fluid Container</Box>
-    </Container>
-  </GridConfigProvider>
-</Canvas>

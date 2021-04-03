@@ -29,7 +29,7 @@ const stylesFactory = (
   margin: 0 calc(${gridConfig.gutter} / 2 * -1);
 
   & > * {
-    padding: inherit calc(${gridConfig.gutter} / 2);
+    padding: 0 calc(${gridConfig.gutter} / 2);
   }
 `;
 

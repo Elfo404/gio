@@ -16,7 +16,7 @@ const stylesFactory = (gridConfig: GridConfig, fluid: boolean) =>
   [
     css`
       margin: 0 auto;
-      padding: inherit calc(${gridConfig.gutter} / 2);
+      padding: 0 calc(${gridConfig.gutter} / 2);
     `,
   ].concat(
     fluid

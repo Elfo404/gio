@@ -1,0 +1,25 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
+import { Template } from './col.stories';
+import { Row, Col, GridConfigProvider } from './src';
+import { Box } from './Box';
+
+export const gridConfig = {
+  breakpoints: { xs: 15, sm: 20, md: 25, lg: 30 },
+  gutter: '1rem',
+};
+
+<Meta
+  title="Grid/Col"
+  decorators={[
+    (story) => (
+      <GridConfigProvider value={gridConfig}>{story()}</GridConfigProvider>
+    ),
+  ]}
+  component={Col}
+/>
+
+# Col
+
+<Canvas withToolbar>
+  <Story name="Col">{Template.bind({})}</Story>
+</Canvas>
