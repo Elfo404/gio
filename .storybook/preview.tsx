@@ -18,6 +18,7 @@ export const parameters: Meta['parameters'] = {
   options: {
     storySort: {
       order: [
+        'README',
         'Grid',
         ['README', 'GridConfigProvider', 'Container', 'Row', 'Col'],
       ],
