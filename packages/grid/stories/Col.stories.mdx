@@ -23,3 +23,35 @@ export const gridConfig = {
 <Canvas withToolbar>
   <Story name="Col">{Template.bind({})}</Story>
 </Canvas>
+
+the `Col` component accepts the very same props defined in your `breakpoints` section
+in your grid configuration. Each of these props define how the component behaves starting
+from that specific breakpoint.
+
+## Example
+
+Assuming we have the following configuration:
+
+```ts
+const breakpoints = {
+  sm: 10,
+  md: 20,
+  lg: 30
+}
+```
+
+`Col` accepts 3 props: `sm`, `md`, and `lg`. Each prop is optional, and can be either a `boolean`
+or a `number` between `0` and `1`, better expressed as a fraction (i.e. `xs={1/2}`).
+
+| Value       | Meaning                                                                                                        |
+| ----------- | -------------------------------------------------------------------------------------------------------------- |
+| `undefined` | Do not set a rule. It inherits the previous breakpoint rule, or behaves like `true` on the smallest breakpoint |
+| `true`      | Let the column automatically grow                                                                              |
+| `false`     | Hide the column                                                                                                |
+| `number`    | The column's width will be `(100 * n)%`. (i.e. `1/2` = `50%`)                                                  |
+
+Each breakpoint overrides the previous ones, the default for the first breakpoint (in this case `xs`)
+is `true`.
+
+For example, given `<Col sm={false} lg />`, the column will be hidden for the `sm` **and** `md` breakpoints,
+and it will auto grow starting from the `lg` breakpoint.

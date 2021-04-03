@@ -14,13 +14,13 @@ interface Props {
     | 'space-between'
     | 'space-around'
     | 'space-evenly';
-  align?: 'center' | 'start' | 'end' | 'unset';
+  align?: 'center' | 'start' | 'end';
 }
 
 const stylesFactory = (
   gridConfig: GridConfig,
   justify: Props['justify'] = 'start',
-  align: Props['align'] = 'unset'
+  align: Props['align'] = 'start'
 ) => css`
   display: flex;
   flex-wrap: wrap;

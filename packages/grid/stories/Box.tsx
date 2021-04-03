@@ -9,7 +9,7 @@ interface Props {
 export const Box = ({ tall, children, ...props }: Props): JSX.Element => (
   <div
     css={css`
-      background-color: hsla(0, 0%, 91.37254901960785%, 0.1);
+      background-color: rgba(0, 0, 0, 0.9);
       border-radius: 4px;
       ${tall &&
       css`

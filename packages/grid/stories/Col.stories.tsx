@@ -5,29 +5,26 @@ export const Template = (): JSX.Element => {
   return (
     <Container fluid>
       <Row>
-        <Col>Auto-grow</Col>
-      </Row>
-      <Row>
         <Col xs>
-          <Box>xs</Box>
+          <Box>Auto Grow</Box>
         </Col>
-        <Col xs>
-          <Box>xs</Box>
+        <Col xs={1 / 4}>
+          <Box>1/4</Box>
         </Col>
-        <Col xs>
-          <Box>xs</Box>
+        <Col xs={1 / 5}>
+          <Box>1/5</Box>
         </Col>
       </Row>
 
       <Row>
-        <Col xs={1 / 2}>
-          <Box>xs = 1 / 2</Box>
+        <Col xs={1 / 4}>
+          <Box>1 / 4</Box>
         </Col>
         <Col xs>
-          <Box>xs</Box>
+          <Box>Auto Grow</Box>
         </Col>
         <Col xs>
-          <Box>xs</Box>
+          <Box>Auto Grow</Box>
         </Col>
       </Row>
     </Container>
