@@ -1,13 +1,10 @@
-import { ReactNode, createContext, useContext } from 'react';
+import { PropsWithChildren, createContext, useContext } from 'react';
 
-import { GridConfig } from './types';
+import { GridConfig } from '.';
 
 const GridContext = createContext<GridConfig | null>(null);
 
-interface Props {
-  children: ReactNode;
-  value: GridConfig;
-}
+type Props = PropsWithChildren<{ value: GridConfig }>;
 
 export const GridConfigProvider = (props: Props): JSX.Element => (
   <GridContext.Provider {...props} />

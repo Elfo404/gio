@@ -1,5 +1,5 @@
 import { useGrid } from '../GridConfigProvider';
-import { GridConfig } from '../types';
+import { GridConfig } from '..';
 
 export const useStyles = <
   T extends (gridConfig: GridConfig, ...args: K) => ReturnType<T>,

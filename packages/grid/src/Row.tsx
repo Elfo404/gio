@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 import { ReactNode } from 'react';
 
 import { useStyles } from './hooks/useStyles';
-import { GridConfig } from './types';
+import { GridConfig } from '.';
 
 interface Props {
   children: ReactNode;
@@ -14,46 +14,27 @@ interface Props {
     | 'space-between'
     | 'space-around'
     | 'space-evenly';
-  align?: 'center' | 'start' | 'end';
+  align?: 'center' | 'start' | 'end' | 'unset';
 }
 
 const stylesFactory = (
   gridConfig: GridConfig,
-  justify?: Props['justify'],
-  align?: Props['align']
-) => ({
-  root: css`
-    display: flex;
-    flex-wrap: wrap;
-    ${align &&
-    css`
-      align-items: ${align};
-    `}
-    ${justify &&
-    css`
-      justify-content: ${justify};
-    `}
-    margin-right: calc(${gridConfig.gutter} / 2 * -1);
-    margin-left: calc(${gridConfig.gutter} / 2 * -1);
+  justify: Props['justify'] = 'start',
+  align: Props['align'] = 'unset'
+) => css`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: ${align};
+  justify-content: ${justify};
+  margin: 0 calc(${gridConfig.gutter} / 2 * -1);
 
-    & > * {
-      padding-right: calc(${gridConfig.gutter} / 2);
-      padding-left: calc(${gridConfig.gutter} / 2);
-    }
-  `,
-});
+  & > * {
+    padding: inherit calc(${gridConfig.gutter} / 2);
+  }
+`;
 
-export const Row = ({
-  children,
-  className,
-  justify,
-  align,
-}: Props): JSX.Element => {
+export const Row = ({ justify, align, ...props }: Props): JSX.Element => {
   const styles = useStyles(stylesFactory, justify, align);
 
-  return (
-    <div css={styles.root} className={className}>
-      {children}
-    </div>
-  );
+  return <div css={styles} {...props} />;
 };
