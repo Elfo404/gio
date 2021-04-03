@@ -1,7 +1,7 @@
 import { ComponentProps } from 'react';
 
+import { Container, Row } from '../src';
 import { Box } from './Box';
-import { Container, Row } from './src';
 
 export const Template = (props: ComponentProps<typeof Row>): JSX.Element => {
   return (

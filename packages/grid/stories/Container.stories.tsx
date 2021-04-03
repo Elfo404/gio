@@ -1,7 +1,7 @@
 import { ComponentProps } from 'react';
 
+import { Container } from '../src';
 import { Box } from './Box';
-import { Container } from './src';
 
 export const Template = ({
   fluid,

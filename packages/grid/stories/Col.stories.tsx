@@ -1,5 +1,5 @@
+import { Col, Container, Row } from '../src';
 import { Box } from './Box';
-import { Col, Container, Row } from './src';
 
 export const Template = (): JSX.Element => {
   return (
