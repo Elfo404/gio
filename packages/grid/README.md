@@ -32,7 +32,6 @@ const gridConfig = {
     lg: 75,
   },
   gutter: '1.5rem',
-  outerMargin: '1rem',
 };
 
 export const App = () => {
