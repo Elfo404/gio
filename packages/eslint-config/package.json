@@ -2,8 +2,9 @@
   "name": "@gio/eslint-config",
   "version": "0.0.0",
   "license": "MIT",
+  "author": "Giordano Ricci <me@giordanoricci.com>",
+  "repository": "github:Elfo404/gio",
   "main": "index.js",
-  "private": true,
   "keywords": [
     "eslint",
     "eslintconfig"
