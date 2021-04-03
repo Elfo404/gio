@@ -4,7 +4,7 @@ Think of this like as my dotfiles of npm packages.
 
 ## TODOs
 
-- Add tests for all packages
+- ~~Add tests for all packages~~
   - Maybe some of the tests configs can be packaged as well?
 - CI configuration using GitHub Actions
   - Lint
