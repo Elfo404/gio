@@ -13,7 +13,8 @@
       "allowBranch": ["master", "develop"]
     },
     "publish": {
-      "graphType": "all"
+      "graphType": "all",
+      "verifyAccess": false
     }
   },
   "changelogPreset": {
