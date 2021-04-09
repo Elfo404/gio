@@ -9,6 +9,9 @@
     "eslint",
     "eslintconfig"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "peerDependencies": {
     "eslint": ">=3",
     "eslint-plugin-prettier": "^3.3.1",
