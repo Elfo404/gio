@@ -1,4 +1,22 @@
 {
   "packages": ["packages/*"],
-  "version": "independent"
+  "version": "independent",
+  "ignoreChanges": [
+    "**/__fixtures__/**",
+    "**/__tests__/**",
+    "**/*.md",
+    "**/*.mdx"
+  ],
+  "command": {
+    "version": {
+      "message": "chore(release): [skip ci] publish",
+      "allowBranch": ["master", "develop"]
+    },
+    "publish": {
+      "graphType": "all"
+    }
+  },
+  "changelogPreset": {
+    "name": "conventionalcommits"
+  }
 }

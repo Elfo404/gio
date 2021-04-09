@@ -12,6 +12,8 @@
     "clean": "rm -rf ./dist",
     "dev": "npm run clean && tsc --watch",
     "build": "npm run clean && tsc",
+    "//": "TODO: remove all other files on prepublishOnly",
+    "prepublishOnly": "npm run build",
     "limit": "npm run build && size-limit",
     "precommit": "lint-staged --quiet"
   },

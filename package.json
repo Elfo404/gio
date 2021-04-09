@@ -11,7 +11,10 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o public",
-    "test": "jest"
+    "test": "jest",
+    "build:all": "lerna run build",
+    "publish:pre": "lerna publish --conventional-commits --conventional-prerelease --no-changelog --no-git-tag-version --yes",
+    "publish:stable": "lerna publish --conventional-commits --conventional-graduate --create-release github"
   },
   "devDependencies": {
     "@babel/core": "^7.13.14",

@@ -1,0 +1,44 @@
+name: Publlish NPM packages
+
+on:
+  push:
+    branches:
+      - master
+      - develop
+
+jobs:
+  deploy:
+    name: Publlish NPM packages
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Configure Git User
+        run: |
+          git config --global user.name 'Elfo404'
+          git config --global user.email 'me@giordanoricci.com'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 15
+          registry-url: 'https://registry.npmjs.org'
+          scope: '@gio'
+
+      - name: Prepare
+        run: npm ci
+
+      - name: Test
+        run: npm run test
+
+      - name: Publish pre-releases
+        if: ${{ github.ref == 'refs/heads/develop' }}
+        run: npm run publish:pre
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish stable releases
+        if: ${{ github.ref == 'refs/heads/master' }}
+        run: npm run publish:stable
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
