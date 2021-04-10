@@ -1,6 +1,6 @@
 {
   "name": "@elfo404/grid",
-  "version": "0.0.1-alpha.1",
+  "version": "0.0.1-alpha.2",
   "license": "MIT",
   "author": "Giordano Ricci <me@giordanoricci.com>",
   "repository": "github:Elfo404/gio",
@@ -18,14 +18,14 @@
     "precommit": "lint-staged --quiet"
   },
   "devDependencies": {
+    "@elfo404/eslint-config-react": "^0.0.1-alpha.2",
     "@emotion/react": "^11.1.5",
-    "@elfo404/eslint-config-react": "^0.0.1-alpha.1",
+    "@size-limit/preset-small-lib": "^4.10.2",
+    "@size-limit/time": "^4.10.2",
     "@testing-library/react": "^11.2.6",
     "@testing-library/react-hooks": "^5.1.1",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
-    "@size-limit/preset-small-lib": "^4.10.2",
-    "@size-limit/time": "^4.10.2",
     "eslint": "7.24.0",
     "import-sort-style-module": "^6.0.0",
     "lint-staged": "10.5.4",
