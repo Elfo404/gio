@@ -1,6 +1,6 @@
 {
   "name": "@elfo404/eslint-config-react",
-  "version": "0.0.0",
+  "version": "0.0.1-alpha.0",
   "license": "MIT",
   "author": "Giordano Ricci <me@giordanoricci.com>",
   "repository": "github:Elfo404/gio",
@@ -18,6 +18,6 @@
     "eslint-plugin-react": "^7.23.1"
   },
   "dependencies": {
-    "@elfo404/eslint-config": "^0.0.0"
+    "@elfo404/eslint-config": "^0.0.1-alpha.0"
   }
 }
