@@ -37,6 +37,9 @@
     "@emotion/react": "^11.1.5",
     "react": "^17.0.2"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "importSort": {
     ".ts, .tsx": {
       "style": "module"
