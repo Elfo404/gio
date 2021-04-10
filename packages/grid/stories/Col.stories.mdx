@@ -37,7 +37,7 @@ const breakpoints = {
   sm: 10,
   md: 20,
   lg: 30
-}
+};
 ```
 
 `Col` accepts 3 props: `sm`, `md`, and `lg`. Each prop is optional, and can be either a `boolean`
@@ -50,7 +50,7 @@ or a `number` between `0` and `1`, better expressed as a fraction (i.e. `xs={1/2
 | `false`     | Hide the column                                                                                                |
 | `number`    | The column's width will be `(100 * n)%`. (i.e. `1/2` = `50%`)                                                  |
 
-Each breakpoint overrides the previous ones, the default for the first breakpoint (in this case `xs`)
+Each breakpoint overrides the previous ones, the default for the first breakpoint (in this case `sm`)
 is `true`.
 
 For example, given `<Col sm={false} lg />`, the column will be hidden for the `sm` **and** `md` breakpoints,
