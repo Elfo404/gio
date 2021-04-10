@@ -16,8 +16,8 @@
     "build-storybook": "build-storybook -o public",
     "test": "jest",
     "build:all": "lerna run build",
-    "publish:pre": "lerna publish --conventional-commits --conventional-prerelease --no-changelog --yes",
-    "publish:stable": "lerna publish --conventional-commits --conventional-graduate --create-release github --yes --dist-tag next"
+    "publish:pre": "lerna publish --conventional-commits --conventional-prerelease --no-changelog --yes --dist-tag next",
+    "publish:stable": "lerna publish --conventional-commits --conventional-graduate --create-release github --yes"
   },
   "devDependencies": {
     "@babel/core": "^7.13.15",
