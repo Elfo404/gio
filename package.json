@@ -16,19 +16,19 @@
     "build-storybook": "build-storybook -o public",
     "test": "jest",
     "build:all": "lerna run build",
-    "publish:pre": "lerna publish --conventional-commits --conventional-prerelease --no-changelog --no-git-tag-version --yes",
-    "publish:stable": "lerna publish --conventional-commits --conventional-graduate --create-release github"
+    "publish:pre": "lerna publish --conventional-commits --conventional-prerelease --no-changelog --yes",
+    "publish:stable": "lerna publish --conventional-commits --conventional-graduate --create-release github --yes"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.14",
+    "@babel/core": "^7.13.15",
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
-    "@emotion/babel-plugin": "^11.2.0",
+    "@emotion/babel-plugin": "^11.3.0",
     "@emotion/react": "^11.1.5",
-    "@storybook/addon-actions": "^6.2.2",
-    "@storybook/addon-essentials": "^6.2.2",
-    "@storybook/addon-links": "^6.2.2",
-    "@storybook/react": "^6.2.2",
+    "@storybook/addon-actions": "^6.2.7",
+    "@storybook/addon-essentials": "^6.2.7",
+    "@storybook/addon-links": "^6.2.7",
+    "@storybook/react": "^6.2.7",
     "@types/jest": "^26.0.22",
     "babel-loader": "^8.2.2",
     "husky": "^6.0.0",
@@ -40,7 +40,7 @@
     "react-dom": "^17.0.2",
     "ts-jest": "^26.5.4",
     "ts-node": "^9.1.1",
-    "typescript": "^4.2.3"
+    "typescript": "^4.2.4"
   },
   "importSort": {
     ".js, .ts, .tsx": {
