@@ -1,5 +1,5 @@
 {
-  "name": "@gio/eslint-config-react",
+  "name": "@elfo404/eslint-config-react",
   "version": "0.0.0",
   "license": "MIT",
   "author": "Giordano Ricci <me@giordanoricci.com>",
@@ -18,6 +18,6 @@
     "eslint-plugin-react": "^7.23.1"
   },
   "dependencies": {
-    "@gio/eslint-config": "^0.0.0"
+    "@elfo404/eslint-config": "^0.0.0"
   }
 }

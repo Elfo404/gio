@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: 15
           registry-url: 'https://registry.npmjs.org'
-          scope: '@gio'
+          scope: '@elfo404'
 
       - name: Prepare
         run: npm ci

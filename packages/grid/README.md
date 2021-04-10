@@ -1,8 +1,8 @@
-# @gio/grid
+# @elfo404/grid
 
 ## A simple opinionated flex-based grid system
 
-`@gio/grid` is a simple and opinionanted responsive grid system for react based on emotion and flexbox.
+`@elfo404/grid` is a simple and opinionanted responsive grid system for react based on emotion and flexbox.
 
 It's heavily inspired by [flexboxGrid](https://github.com/kristoferjoseph/flexboxgrid).
 It doesn't try to solve every possible layout problem, but (hopefully) will solve most of the simple use cases.
@@ -10,19 +10,19 @@ It doesn't try to solve every possible layout problem, but (hopefully) will solv
 ## Install
 
 ```bash
-npm i @gio/grid
+npm i @elfo404/grid
 ```
 
 or
 
 ```bash
-yarn add @gio/grid
+yarn add @elfo404/grid
 ```
 
 ## Usage
 
 ```tsx
-import { GridConfigProvider, Container, Row, Col } from '@gio/grid';
+import { GridConfigProvider, Container, Row, Col } from '@elfo404/grid';
 
 const gridConfig = {
   breakpoints: {
@@ -55,9 +55,9 @@ In order to get the correct types, we leverage [module augmentation](https://www
 
 ```ts
 // grid.d.ts
-import { Breakpoints } from '@gio/grid';
+import { Breakpoints } from '@elfo404/grid';
 
-declare module `@gio/grid` {
+declare module `@elfo404/grid` {
   interface Breakpoints {
     xs: number;
     sm: number;
