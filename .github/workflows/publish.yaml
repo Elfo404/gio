@@ -39,6 +39,10 @@ jobs:
 
       - name: Publish stable releases
         if: ${{ github.ref == 'refs/heads/master' }}
-        run: npm run publish:stable
+        run: |
+          npm run publish:stable
+          git checkout develop
+          git merge master --ff-only
+          git push origin develop
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
