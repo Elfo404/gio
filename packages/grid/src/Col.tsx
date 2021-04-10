@@ -59,8 +59,11 @@ export const Col = (props: Props): JSX.Element => {
   const breakpointsValues = Object.keys(gridConfig.breakpoints).map(
     (propName) => props[propName as keyof GridConfig['breakpoints']]
   );
+  const otherProps = Object.fromEntries(
+    Object.entries(props).filter(([key]) => !(key in gridConfig.breakpoints))
+  );
 
   const styles = useStyles(stylesFactory, breakpointsValues);
 
-  return <div css={styles} {...props} />;
+  return <div css={styles} {...otherProps} />;
 };
