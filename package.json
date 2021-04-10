@@ -26,6 +26,7 @@
     "@emotion/babel-plugin": "^11.3.0",
     "@emotion/react": "^11.1.5",
     "@storybook/addon-actions": "^6.2.7",
+    "@storybook/addon-docs": "^6.2.7",
     "@storybook/addon-essentials": "^6.2.7",
     "@storybook/addon-links": "^6.2.7",
     "@storybook/react": "^6.2.7",
