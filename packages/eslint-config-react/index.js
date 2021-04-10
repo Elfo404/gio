@@ -3,7 +3,6 @@ module.exports = {
     '@elfo404/eslint-config',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
-    'plugin:prettier/recommended',
   ],
   rules: {
     'react/prop-types': 0,
