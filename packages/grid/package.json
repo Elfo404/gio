@@ -1,5 +1,5 @@
 {
-  "name": "@gio/grid",
+  "name": "@elfo404/grid",
   "version": "0.0.0",
   "license": "MIT",
   "author": "Giordano Ricci <me@giordanoricci.com>",
@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@emotion/react": "^11.1.5",
-    "@gio/eslint-config-react": "^0.0.0",
+    "@elfo404/eslint-config-react": "^0.0.0",
     "@testing-library/react": "^11.2.6",
     "@testing-library/react-hooks": "^5.1.1",
     "@types/react": "^17.0.3",

@@ -1,4 +1,4 @@
 {
   "root": true,
-  "extends": ["@gio/eslint-config"]
+  "extends": ["@elfo404/eslint-config"]
 }

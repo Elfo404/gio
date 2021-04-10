@@ -1,4 +1,4 @@
 {
   "root": true,
-  "extends": ["@gio/eslint-config-react"]
+  "extends": ["@elfo404/eslint-config-react"]
 }
