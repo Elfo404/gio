@@ -26,6 +26,14 @@ export const Template = (): JSX.Element => (
         <Box>Auto Grow</Box>
       </Col>
     </Row>
-    <Row />
+
+    <Row>
+      <Col xs={false} md={1 / 2}>
+        <Box>hidden xs</Box>
+      </Col>
+      <Col xs>
+        <Box>Auto Grow</Box>
+      </Col>
+    </Row>
   </Container>
 );

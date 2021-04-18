@@ -35,7 +35,7 @@ const stylesFactory = (
         `;
       }
 
-      if (i === 0 || typeof v[i] === 'number') {
+      if ((i === 0 && v[i] === true) || typeof v[i] === 'number') {
         return css`
           display: block;
           flex-basis: ${100 * (v[i] as number)}%;
