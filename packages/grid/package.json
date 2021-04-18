@@ -50,7 +50,7 @@
   "size-limit": [
     {
       "path": "./dist/*.js",
-      "limit": "800 B"
+      "limit": "850 B"
     }
   ]
 }

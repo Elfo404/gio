@@ -1,4 +1,4 @@
-import { css } from '@emotion/react';
+import { SerializedStyles, css } from '@emotion/react';
 import { HTMLProps } from 'react';
 
 import { useGrid } from './GridConfigProvider';
@@ -10,6 +10,18 @@ type BreakpointsType = {
 };
 
 type Props = HTMLProps<HTMLDivElement> & BreakpointsType;
+
+const wrapper = (breakpoint: number, shouldWrap: boolean) => (
+  style: SerializedStyles
+) => {
+  if (!shouldWrap) return style;
+
+  return css`
+    @media only screen and (min-width: ${breakpoint}em) {
+      ${style}
+    }
+  `;
+};
 
 const stylesFactory = (
   gridConfig: GridConfig,
@@ -23,32 +35,29 @@ const stylesFactory = (
     // Just to ensure breakpoints are sorted from smallest to biggest
     .sort()
     .map((breakpoint, i) => {
-      // TODO: This can for sure be done WAAAAY better
-      // Don't wrap the first breakpoint in media query
+      const wrap = wrapper(breakpoint, i !== 0);
 
-      if ((i === 0 && v[i] === undefined) || v[i] === true) {
-        return css`
+      if ((i === 0 && v[0] === undefined) || v[i] === true) {
+        return wrap(css`
           display: block;
           flex-basis: 0;
           flex-grow: 1;
           max-width: 100%;
-        `;
+        `);
       }
 
-      if ((i === 0 && v[i] === true) || typeof v[i] === 'number') {
-        return css`
+      if (typeof v[i] === 'number') {
+        return wrap(css`
           display: block;
           flex-basis: ${100 * (v[i] as number)}%;
           max-width: ${100 * (v[i] as number)}%;
-        `;
+        `);
       }
 
       if (v[i] === false) {
-        return css`
-          @media only screen and (min-width: ${breakpoint}em) {
-            display: none;
-          }
-        `;
+        return wrap(css`
+          display: none;
+        `);
       }
     }),
 ];

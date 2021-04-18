@@ -19,7 +19,7 @@ export const Template = (): JSX.Element => (
       <Col xs={1 / 4}>
         <Box>1 / 4</Box>
       </Col>
-      <Col xs>
+      <Col xs sm={1 / 2}>
         <Box>Auto Grow</Box>
       </Col>
       <Col xs>
@@ -29,7 +29,7 @@ export const Template = (): JSX.Element => (
 
     <Row>
       <Col xs={false} md={1 / 2}>
-        <Box>hidden xs</Box>
+        <Box>Hidden xs</Box>
       </Col>
       <Col xs>
         <Box>Auto Grow</Box>
