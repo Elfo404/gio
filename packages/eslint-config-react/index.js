@@ -1,13 +1,13 @@
 module.exports = {
   extends: [
-    '@elfo404/eslint-config',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
+    '@elfo404/eslint-config',
   ],
   rules: {
     'react/prop-types': 'off',
-    'react/self-closing-comp': 'error',
     'react/react-in-jsx-scope': 'off',
+    'react/self-closing-comp': 'error',
   },
   settings: {
     react: {
