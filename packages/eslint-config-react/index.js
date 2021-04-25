@@ -5,9 +5,9 @@ module.exports = {
     'plugin:react/recommended',
   ],
   rules: {
-    'react/prop-types': 0,
+    'react/prop-types': 'off',
     'react/self-closing-comp': 'error',
-    'react/react-in-jsx-scope': 0,
+    'react/react-in-jsx-scope': 'off',
   },
   settings: {
     react: {
