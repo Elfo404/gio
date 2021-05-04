@@ -20,7 +20,7 @@
     "publish:stable": "lerna publish --conventional-commits --conventional-graduate --create-release github --yes"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.16",
+    "@babel/core": "^7.14.0",
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
     "@emotion/babel-plugin": "^11.3.0",
@@ -30,7 +30,7 @@
     "@storybook/addon-essentials": "^6.2.9",
     "@storybook/addon-links": "^6.2.9",
     "@storybook/react": "^6.2.9",
-    "@types/jest": "^26.0.22",
+    "@types/jest": "^26.0.23",
     "babel-loader": "^8.2.2",
     "husky": "^6.0.0",
     "import-sort-style-module": "^6.0.0",
