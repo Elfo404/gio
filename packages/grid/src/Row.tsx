@@ -33,8 +33,6 @@ const stylesFactory = (
   }
 `;
 
-export const Row = ({ justify, align, ...props }: Props): JSX.Element => {
-  const styles = useStyles(stylesFactory, justify, align);
-
-  return <div css={styles} {...props} />;
-};
+export const Row = ({ justify, align, ...props }: Props) => (
+  <div css={useStyles(stylesFactory, justify, align)} {...props} />
+);

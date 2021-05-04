@@ -2,6 +2,8 @@
 
 ## A simple opinionated flex-based grid system
 
+![npm bundle size (version)](https://img.shields.io/bundlephobia/min/@elfo404/grid/latest) ![npm bundle size (version)](https://img.shields.io/bundlephobia/minzip/@elfo404/grid/latest)
+
 `@elfo404/grid` is a simple and opinionanted responsive grid system for react based on emotion and flexbox.
 
 It's heavily inspired by [flexboxGrid](https://github.com/kristoferjoseph/flexboxgrid).

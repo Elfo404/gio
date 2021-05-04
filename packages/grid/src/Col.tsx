@@ -36,25 +36,25 @@ const stylesFactory = (
     .sort()
     .map((breakpoint, i) => {
       const wrap = wrapper(breakpoint, i !== 0);
+      const value = v[i];
 
-      if ((i === 0 && v[0] === undefined) || v[i] === true) {
+      if ((i === 0 && value === undefined) || value === true) {
         return wrap(css`
           display: block;
-          flex-basis: 0;
-          flex-grow: 1;
+          flex: 1 1;
           max-width: 100%;
         `);
       }
 
-      if (typeof v[i] === 'number') {
+      if (typeof value === 'number') {
         return wrap(css`
           display: block;
-          flex-basis: ${100 * (v[i] as number)}%;
-          max-width: ${100 * (v[i] as number)}%;
+          flex-basis: ${100 * value}%;
+          max-width: ${100 * value}%;
         `);
       }
 
-      if (v[i] === false) {
+      if (value === false) {
         return wrap(css`
           display: none;
         `);
@@ -63,7 +63,7 @@ const stylesFactory = (
 ];
 
 // TODO: Add offset
-export const Col = (props: Props): JSX.Element => {
+export const Col = (props: Props) => {
   const gridConfig = useGrid();
   const breakpointsValues = Object.keys(gridConfig.breakpoints).map(
     (propName) => props[propName as keyof GridConfig['breakpoints']]
@@ -72,7 +72,7 @@ export const Col = (props: Props): JSX.Element => {
     Object.entries(props).filter(([key]) => !(key in gridConfig.breakpoints))
   );
 
-  const styles = useStyles(stylesFactory, breakpointsValues);
-
-  return <div css={styles} {...otherProps} />;
+  return (
+    <div css={useStyles(stylesFactory, breakpointsValues)} {...otherProps} />
+  );
 };

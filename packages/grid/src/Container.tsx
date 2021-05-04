@@ -35,8 +35,6 @@ const stylesFactory = (gridConfig: GridConfig, fluid: boolean) =>
           )
   );
 
-export const Container = ({ fluid = false, ...props }: Props): JSX.Element => {
-  const style = useStyles(stylesFactory, fluid);
-
-  return <div css={style} {...props} />;
-};
+export const Container = ({ fluid = false, ...props }: Props) => (
+  <div css={useStyles(stylesFactory, fluid)} {...props} />
+);

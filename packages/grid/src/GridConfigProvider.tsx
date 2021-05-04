@@ -6,7 +6,7 @@ const GridContext = createContext<GridConfig | null>(null);
 
 type Props = PropsWithChildren<{ value: GridConfig }>;
 
-export const GridConfigProvider = (props: Props): JSX.Element => (
+export const GridConfigProvider = (props: Props) => (
   <GridContext.Provider {...props} />
 );
 
