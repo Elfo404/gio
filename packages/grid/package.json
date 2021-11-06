@@ -1,39 +1,28 @@
 {
   "name": "@elfo404/grid",
   "version": "0.1.0-alpha.0",
-  "description": "A simple & opinionanted React grid system",
+  "description": "A simple & opinionated React grid system",
   "license": "MIT",
   "author": "Giordano Ricci <me@giordanoricci.com>",
   "repository": "github:Elfo404/gio",
   "homepage": "https://elfo404.github.io/gio/?path=/story/grid-readme--page",
-  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "type": "module",
   "scripts": {
     "clean": "rm -rf ./dist",
     "dev": "npm run clean && tsc --watch",
     "build": "npm run clean && tsc",
     "//": "TODO: remove all other files on prepublishOnly",
     "prepublishOnly": "npm run build",
-    "limit": "npm run build && size-limit",
+    "size": "npm run build && size-limit",
     "precommit": "lint-staged --quiet"
   },
   "devDependencies": {
     "@elfo404/eslint-config-react": "^0.0.1-alpha.8",
-    "@emotion/react": "^11.1.5",
-    "@size-limit/preset-small-lib": "^4.10.2",
-    "@size-limit/time": "^4.10.2",
-    "@testing-library/react": "^11.2.6",
-    "@testing-library/react-hooks": "^5.1.2",
-    "@types/react": "^17.0.4",
-    "@types/react-dom": "^17.0.3",
-    "eslint": "7.25.0",
-    "import-sort-style-module": "^6.0.0",
-    "lint-staged": "10.5.4",
-    "prettier-plugin-import-sort": "^0.0.6",
-    "size-limit": "^4.10.2",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.2.4"
+    "@emotion/react": "^11.5.0",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/react-hooks": "^7.0.2",
+    "@types/react": "^17.0.34",
+    "@types/react-dom": "^17.0.11"
   },
   "peerDependencies": {
     "@emotion/react": "^11.1.5",
@@ -49,8 +38,9 @@
   },
   "size-limit": [
     {
-      "path": "./dist/*.js",
-      "limit": "900 B"
+      "path": "./dist/index.js",
+      "import": "{ Container, Row, Col, GridConfigProvider, useGrid, media }",
+      "limit": "700 B"
     }
   ]
 }

@@ -1,7 +1,10 @@
+import type { InitialOptionsTsJest } from 'ts-jest/dist/types';
+
 import baseConfig from './jest.config.base';
 
-export default {
+const config: InitialOptionsTsJest = {
   ...baseConfig,
-  roots: ['<rootDir>'],
   projects: ['<rootDir>/packages/grid'],
 };
+
+export default config;
