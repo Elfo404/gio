@@ -7,6 +7,7 @@
   "repository": "github:Elfo404/gio",
   "homepage": "https://elfo404.github.io/gio/?path=/story/grid-readme--page",
   "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
   "scripts": {
     "clean": "rm -rf ./dist",
     "dev": "npm run clean && tsc --watch",
