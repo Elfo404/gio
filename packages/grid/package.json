@@ -1,6 +1,6 @@
 {
   "name": "@elfo404/grid",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.2",
   "description": "A simple & opinionated React grid system",
   "license": "MIT",
   "author": "Giordano Ricci <me@giordanoricci.com>",
